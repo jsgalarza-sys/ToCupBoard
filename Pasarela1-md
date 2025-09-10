@@ -1,0 +1,27 @@
+console.log('Script cargado correctamente');
+
+const STRIPE_PUBLIC_KEY = 'pk_test_51S5WqtRGVcWBKh3ldmtFLX3Tl8JVs4r40FRzoWNSwkKDl6KEzp1qUpmRWVkGr1ZQetpTkZE5doKAsq8DOrNHXltq00rW1IkWhwXX'; // Clave pública de prueba
+const PRODUCT_ID = 'camiseta-local';
+const CLIENT_EMAIL = 'cliente@email.com'; // Simulado
+const tokenPago = 'tok_visa'; // Token de prueba de Stripe
+
+function iniciarPago() {
+  console.log('Botón de compra presionado');
+  alert('Pago Realizado');
+
+  // Simulación del proceso de pago
+  const datosPago = {
+    producto: PRODUCT_ID,
+    email: CLIENT_EMAIL,
+    token: tokenPago,
+    monto: 2000 // en centavos ($20.00)
+  };
+
+  console.log('Datos del pago:', datosPago);
+
+  // Simulación de respuesta del servidor
+  setTimeout(() => {
+    console.log('Pago simulado exitosamente');
+    alert('Pago simulado exitosamente');
+  }, 1000);
+}
